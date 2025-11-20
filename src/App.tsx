@@ -718,46 +718,150 @@ function App() {
                     </div>
                   </div>
 
+                  {/* SERVICIOS ADICIONALES */}
                   <p className="section-title">Servicios adicionales</p>
-                  <div className="row-span-2 form-group services-section">
-                    <label className="form-label">¿Planean usar visuales (pantallas, proyector) o audio? <span className="req">*</span></label>
-                    <div className="choice-group" data-choice="visuales" role="group" aria-label="Requerimiento A/V">
-                      <button type="button" className="choice-btn" data-value="Sí">Sí</button>
-                      <button type="button" className="choice-btn" data-value="No">No</button>
-                      <button type="button" className="choice-btn" data-value="No estoy seguro">No estoy seguro</button>
-                    </div>
-                    <input type="hidden" name="needs_av" value="" />
-                    <div id="avDetailsWrap" style={{ display: 'none', marginTop: '12px' }}>
-                      <div className="hint" style={{ marginBottom: '8px' }}>Selecciona lo que podría necesitar tu evento:</div>
-                      <div className="chip-group">
-                        <label className="chip"><input type="checkbox" name="av_items" value="Proyector" />Proyector</label>
-                        <label className="chip"><input type="checkbox" name="av_items" value="Pantalla" />Pantalla</label>
-                        <label className="chip"><input type="checkbox" name="av_items" value="Micrófonos" />Micrófonos</label>
-                        <label className="chip"><input type="checkbox" name="av_items" value="Bocinas" />Bocinas</label>
-                        <label className="chip"><input type="checkbox" name="av_items" value="Iluminación" />Iluminación</label>
-                        <label className="chip"><input type="checkbox" name="av_items" value="Muro LED" />Muro LED</label>
-                      </div>
-                      <label htmlFor="avNotes" style={{ marginTop: '12px' }}>Detalles A/V</label>
-                      <textarea className="fld" id="avNotes" name="av_notes" rows={3} placeholder="Ej. 2 micrófonos inalámbricos, HDMI, pantalla cerca del escenario…"></textarea>
-                      {errors.av_notes && <div className="field-error">{errors.av_notes}</div>}
-                    </div>
-                    {errors.needs_av && <div className="field-error">{errors.needs_av}</div>}
-                  </div>
+                  <div
+                    className="row-span-2 section soft-panel services-section"
+                    aria-label="Servicios adicionales"
+                  >
+                    <div className="form-row">
+                      {/* Columna 1: A/V */}
+                      <div className="form-field services-column">
+                        <label className="form-label">
+                          ¿Planean usar visuales (pantallas, proyector) o audio?{" "}
+                          <span className="req">*</span>
+                        </label>
 
-                  <div className="row-span-2 form-group services-section">
-                    <label className="form-label">¿Te interesan paquetes de Foto/Video? <span className="req">*</span></label>
-                    <div className="choice-group" data-choice="media" role="group" aria-label="Interés en Foto/Video">
-                      <button type="button" className="choice-btn" data-value="Sí">Sí</button>
-                      <button type="button" className="choice-btn" data-value="No">No</button>
-                      <button type="button" className="choice-btn" data-value="Tal vez">Tal vez</button>
+                        <div
+                          className="choice-group"
+                          data-choice="visuales"
+                          role="group"
+                          aria-label="Requerimiento A/V"
+                        >
+                          <button type="button" className="choice-btn" data-value="Sí">
+                            Sí
+                          </button>
+                          <button type="button" className="choice-btn" data-value="No">
+                            No
+                          </button>
+                          <button
+                            type="button"
+                            className="choice-btn"
+                            data-value="No estoy seguro"
+                          >
+                            No estoy seguro
+                          </button>
+                        </div>
+
+                        <input type="hidden" name="needs_av" value="" />
+
+                        <div
+                          id="avDetailsWrap"
+                          style={{ display: 'none', marginTop: '12px' }}
+                        >
+                          <div className="hint" style={{ marginBottom: '8px' }}>
+                            Selecciona lo que podría necesitar tu evento:
+                          </div>
+
+                          <div className="chip-group">
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Proyector" />
+                              Proyector
+                            </label>
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Pantalla" />
+                              Pantalla
+                            </label>
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Micrófonos" />
+                              Micrófonos
+                            </label>
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Bocinas" />
+                              Bocinas
+                            </label>
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Iluminación" />
+                              Iluminación
+                            </label>
+                            <label className="chip">
+                              <input type="checkbox" name="av_items" value="Muro LED" />
+                              Muro LED
+                            </label>
+                          </div>
+
+                          <label htmlFor="avNotes" style={{ marginTop: '12px' }}>
+                            Detalles A/V
+                          </label>
+                          <textarea
+                            className="fld"
+                            id="avNotes"
+                            name="av_notes"
+                            rows={3}
+                            placeholder="Ej. 2 micrófonos inalámbricos, HDMI, pantalla cerca del escenario…"
+                          ></textarea>
+                          {errors.av_notes && (
+                            <div className="field-error">{errors.av_notes}</div>
+                          )}
+                        </div>
+
+                        {errors.needs_av && (
+                          <div className="field-error">{errors.needs_av}</div>
+                        )}
+                      </div>
+
+                      {/* Columna 2: Foto / Video */}
+                      <div className="form-field services-column">
+                        <label className="form-label">
+                          ¿Te interesan paquetes de Foto/Video?{" "}
+                          <span className="req">*</span>
+                        </label>
+
+                        <div
+                          className="choice-group"
+                          data-choice="media"
+                          role="group"
+                          aria-label="Interés en Foto/Video"
+                        >
+                          <button type="button" className="choice-btn" data-value="Sí">
+                            Sí
+                          </button>
+                          <button type="button" className="choice-btn" data-value="No">
+                            No
+                          </button>
+                          <button
+                            type="button"
+                            className="choice-btn"
+                            data-value="Tal vez"
+                          >
+                            Tal vez
+                          </button>
+                        </div>
+
+                        <input type="hidden" name="media_interest" value="" />
+
+                        <div
+                          id="mediaDetailsWrap"
+                          style={{ display: 'none', marginTop: '12px' }}
+                        >
+                          <label htmlFor="mediaNotes">Cuéntanos qué buscas</label>
+                          <textarea
+                            className="fld"
+                            id="mediaNotes"
+                            name="media_notes"
+                            rows={3}
+                            placeholder="Ej. highlight reel, cabina de fotos, dron…"
+                          ></textarea>
+                          {errors.media_notes && (
+                            <div className="field-error">{errors.media_notes}</div>
+                          )}
+                        </div>
+
+                        {errors.media_interest && (
+                          <div className="field-error">{errors.media_interest}</div>
+                        )}
+                      </div>
                     </div>
-                    <input type="hidden" name="media_interest" value="" />
-                    <div id="mediaDetailsWrap" style={{ display: 'none', marginTop: '12px' }}>
-                      <label htmlFor="mediaNotes">Cuéntanos qué buscas</label>
-                      <textarea className="fld" id="mediaNotes" name="media_notes" rows={3} placeholder="Ej. highlight reel, cabina de fotos, dron…"></textarea>
-                      {errors.media_notes && <div className="field-error">{errors.media_notes}</div>}
-                    </div>
-                    {errors.media_interest && <div className="field-error">{errors.media_interest}</div>}
                   </div>
 
                   <div className="row-span-2 form-group">

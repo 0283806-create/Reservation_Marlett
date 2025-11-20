@@ -714,3 +714,25 @@ input[type="time"]::-webkit-inner-spin-button {
   outline: 2px solid #f3d48b;
   outline-offset: 2px;
 }
+
+/* Servicios adicionales: layout en dos columnas */
+.services-section .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.services-section .services-column {
+  flex: 1 1 260px;
+}
+
+.services-section .choice-group {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.services-section .chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
