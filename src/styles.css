@@ -701,7 +701,9 @@ input[type="time"]::-webkit-inner-spin-button {
   transform: translateY(-1px);
 }
 
-.choice-btn.is-active {
+.choice-btn.is-active,
+.choice-btn.active,
+.choice-btn.selected {
   background: radial-gradient(circle at top left, #f3e0a1, #b99854);
   color: #11110f;
   border-color: transparent;
