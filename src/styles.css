@@ -737,30 +737,44 @@ input[type="time"]::-webkit-inner-spin-button {
   gap: 8px;
 }
 
-/* Hero portada restaurante */
-.hero-wrap {
+/* Hero frontal restaurante */
+.hero-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 40px 0 32px;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  padding-inline: 1.5rem;
 }
 
-.hero-card {
-  width: min(1120px, 100% - 64px);
-  border-radius: 32px;
+.hero-banner {
+  position: relative;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
-  background: #050807;
+  background: #050605;
+  min-height: 320px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
 }
 
 .hero-image {
-  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: center;
 }
 
-.hero-wrap,
-.hero-card {
-  min-height: auto;
+@media (min-width: 1200px) {
+  .hero-banner {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    padding-inline: 1rem;
+  }
+
+  .hero-banner {
+    border-radius: 22px;
+    min-height: 260px;
+  }
 }

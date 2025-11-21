@@ -2,13 +2,13 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero-wrap" aria-label="Fachada de Marlett">
-      <div className="hero-card">
+    <section className="hero-wrapper" aria-label="Fachada Marlett">
+      <div className="hero-banner">
         <img
-          src="/assets/marlett_hero.jpeg"
-          alt="Fachada de Marlett — Restaurante &amp; Salón de eventos"
+          src="/assets/PHOTO-2025-07-09-20-40-28.jpeg"
+          alt="Fachada del restaurante y salón Marlett"
           className="hero-image"
-          loading="eager"
+          loading="lazy"
           decoding="async"
         />
       </div>
