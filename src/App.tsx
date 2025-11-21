@@ -460,7 +460,9 @@ function App() {
         const setActive = (value: string) => {
           buttons.forEach((btn) => {
             const btnValue = (btn.dataset.value || btn.textContent || '').trim();
-            btn.classList.toggle('is-active', btnValue === value);
+            const isSelected = btnValue === value;
+            btn.classList.toggle('is-active', isSelected);
+            btn.classList.toggle('active', isSelected);
           });
         };
 
