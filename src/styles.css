@@ -736,3 +736,31 @@ input[type="time"]::-webkit-inner-spin-button {
   flex-wrap: wrap;
   gap: 8px;
 }
+
+/* Hero portada restaurante */
+.hero-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 32px;
+}
+
+.hero-card {
+  width: min(1120px, 100% - 64px);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
+  background: #050807;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-wrap,
+.hero-card {
+  min-height: auto;
+}
