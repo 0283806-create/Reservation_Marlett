@@ -550,7 +550,7 @@ function App() {
         <div className="borde-hojas borde-hojas-dark"></div>
 
         <section className="marlett-divider" aria-label="Frase de transición">
-          <h2 className="golden-text scroll-animate">EAT. SHARE. ENJOY.</h2>
+          <h2 className="golden-text scroll-animate">COME. COMPARTE. DISFRUTA.</h2>
         </section>
 
         <section className="wrap" aria-label="Ambientes Marlett">
