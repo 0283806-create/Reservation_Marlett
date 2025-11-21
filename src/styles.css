@@ -701,16 +701,54 @@ input[type="time"]::-webkit-inner-spin-button {
   transform: translateY(-1px);
 }
 
-.choice-btn.is-active {
-  background: radial-gradient(circle at top left, #f3e0a1, #b99854);
-  color: #11110f;
-  border-color: transparent;
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.45),
-    0 14px 28px rgba(0, 0, 0, 0.55);
-}
-
 .choice-btn:focus-visible {
   outline: 2px solid #f3d48b;
   outline-offset: 2px;
+}
+
+.choice-btn.active,
+.choice-btn.is-active {
+  background-color: #d4af37;
+  color: black;
+  border-color: #d4af37;
+}
+
+/* Servicios adicionales: layout en dos columnas */
+.services-section .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.services-section .services-column {
+  flex: 1 1 260px;
+}
+
+.services-section .choice-group {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.services-section .chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Hero frontal restaurante */
+.hero-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem auto;
+  padding: 0 1.5rem;
+  background: transparent;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
