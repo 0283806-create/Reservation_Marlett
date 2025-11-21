@@ -775,6 +775,6 @@ input[type="time"]::-webkit-inner-spin-button {
 
   .hero-banner {
     border-radius: 22px;
-    min-height: 260px;
+    min-height: 250px;
   }
 }
